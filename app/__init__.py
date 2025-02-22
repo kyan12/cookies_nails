@@ -47,11 +47,11 @@ def create_app(config_class=Config):
     if not app.debug and not app.testing:
         if not os.path.exists(app.config['LOG_DIR']):
             os.mkdir(app.config['LOG_DIR'])
-        file_handler = TimedRotatingFileHandler(app.config['LOG_DIR'] + '/kjevents.log', when='midnight', backupCount=30)
+        file_handler = TimedRotatingFileHandler(app.config['LOG_DIR'] + '/cookies.log', when='midnight', backupCount=30)
         file_handler.setFormatter(logging.Formatter(
             '%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d]'))
         file_handler.setLevel(logging.INFO)
         app.logger.addHandler(file_handler)
         app.logger.setLevel(logging.INFO)
-        app.logger.debug('kjevents startup')
+        app.logger.debug('cookies startup')
     return app

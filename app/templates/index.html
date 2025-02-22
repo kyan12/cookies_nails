@@ -1,0 +1,144 @@
+{# templates/home.html #}
+{% extends "base.html" %}
+
+{% block content %}
+<div class="relative bg-primary/10">
+    <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="font-playfair text-4xl md:text-5xl font-bold text-dark mb-6">
+                    Elevate Your Style with Custom Nail Art
+                </h1>
+                <p class="text-lg text-gray-600 mb-8">
+                    Welcome to Cookie's Palette, where every nail becomes a canvas for unique artistic expression. Our premium gel nail services combine durability with stunning designs.
+                </p>
+                <div class="space-x-4">
+                    <a href="/book" class="inline-block bg-accent text-white px-8 py-3 rounded-full hover:bg-primary transition-colors">Book Now</a>
+                    <a href="/gallery" class="inline-block border-2 border-accent text-accent px-8 py-3 rounded-full hover:bg-accent hover:text-white transition-colors">View Gallery</a>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="/static/images/hero-nails2.jpg" alt="Beautiful nail art design" class="rounded-lg shadow-xl">
+                <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
+                    <p class="font-playfair text-lg font-bold text-dark">★ 4.9/5</p>
+                    <p class="text-gray-600">Based on 200+ reviews</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Featured Services -->
+<section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-playfair text-3xl font-bold text-dark text-center mb-12">Our Signature Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="/static/images/nail_design_01.jpg" alt="Gel Nail Art" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-bold text-xl text-dark mb-2">Custom Gel Art</h3>
+                    <p class="text-gray-600 mb-4">Premium gel nails with custom hand-painted designs of your choice.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-accent font-bold">Starts at $75</span>
+                        <span class="text-gray-500">90 mins</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="/static/images/nail_design_02.jpg" alt="3D Nail Art" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-bold text-xl text-dark mb-2">3D Art & Gems</h3>
+                    <p class="text-gray-600 mb-4">Stunning 3D designs with premium crystals and embellishments.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-accent font-bold">Starts at $95</span>
+                        <span class="text-gray-500">120 mins</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="/static/images/nail_design_03.jpg" alt="Simple Gel Nails" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-bold text-xl text-dark mb-2">Simple Elegance</h3>
+                    <p class="text-gray-600 mb-4">Classic gel manicure with optional minimal art or french tips.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-accent font-bold">Starts at $55</span>
+                        <span class="text-gray-500">60 mins</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <a href="/services" class="inline-block border-2 border-accent text-accent px-8 py-3 rounded-full hover:bg-accent hover:text-white transition-colors">View All Services</a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="bg-primary/5 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-playfair text-3xl font-bold text-dark text-center mb-12">What Clients Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="text-accent mb-2">★★★★★</div>
+                <p class="text-gray-600 mb-4">"Cookie is an absolute artist! She created the most beautiful floral design for my wedding day. My nails were a conversation starter at the reception!"</p>
+                <p class="font-bold text-dark">- Sarah M.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="text-accent mb-2">★★★★★</div>
+                <p class="text-gray-600 mb-4">"The attention to detail is incredible. I love how every visit results in a unique masterpiece. Worth every penny!"</p>
+                <p class="font-bold text-dark">- Jessica R.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="text-accent mb-2">★★★★★</div>
+                <p class="text-gray-600 mb-4">"Finally found my go-to nail artist! Cookie's work lasts long and always looks stunning. The 3D designs are out of this world!"</p>
+                <p class="font-bold text-dark">- Michelle K.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Creations -->
+<section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-playfair text-3xl font-bold text-dark text-center mb-12">Latest Creations</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+                <img src="/static/images/nail_design_04.jpg" alt="Nail art design" class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+                <img src="/static/images/nail_design_05.jpg" alt="Nail art design" class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+                <img src="/static/images/nail_design_06.jpg" alt="Nail art design" class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+                <img src="/static/images/nail_design_07.jpg" alt="Nail art design" class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+                <img src="/static/images/tiny_nail_gels.jpg" alt="Nail art design" class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+                <img src="/static/images/two_hands_flowery_gold_pink.jpg" alt="Nail art design" class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+                <img src="/static/images/flowery_pink_two_thumbs.jpg" alt="Nail art design" class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+                <img src="/static/images/hero-nails.jpg" alt="Nail art design" class="w-full h-full object-cover">
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <a href="/gallery" class="inline-block border-2 border-accent text-accent px-8 py-3 rounded-full hover:bg-accent hover:text-white transition-colors">View Full Gallery</a>
+        </div>
+    </div>
+</section>
+
+<!-- Booking CTA -->
+<section class="bg-accent text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-playfair text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Nails?</h2>
+        <p class="text-lg mb-8 opacity-90">Book your appointment today and experience the artistry of Cookie's Palette</p>
+        <a href="/book" class="inline-block bg-white text-accent px-8 py-3 rounded-full hover:bg-primary hover:text-white transition-colors">Book Your Appointment</a>
+    </div>
+</section>
+{% endblock %}

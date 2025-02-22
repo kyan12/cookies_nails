@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- About Header -->
+<div class="bg-primary/10 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="font-playfair text-4xl md:text-5xl font-bold text-dark mb-6">The Artist Behind Cookie's Palette</h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Where passion for art meets nail perfection in the heart of Middle Village, Queens
+        </p>
+    </div>
+</div>
+
+<!-- Artist Introduction -->
+<section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="relative">
+                <img src="/static/images/two_hands_flowery_gold_pink.jpg" alt="Cookie's nail art work" class="rounded-lg shadow-xl">
+                <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
+                    <p class="font-playfair text-lg font-bold text-dark">★ 4.9/5</p>
+                    <p class="text-gray-600">200+ Happy Clients</p>
+                </div>
+            </div>
+            <div>
+                <h2 class="font-playfair text-3xl font-bold text-dark mb-6">Hi, I'm Cookie!</h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    As a nail artist based in Middle Village, Queens, I've turned my passion for art into creating miniature masterpieces on nails. Each design is a unique expression of my client's personality, brought to life through meticulous attention to detail and premium products.
+                </p>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    My journey in nail artistry began with a simple love for creativity and has evolved into a dedicated practice of bringing joy through beautiful, long-lasting nail designs. I specialize in custom hand-painted art, 3D designs, and elegant gel applications.
+                </p>
+                <div class="grid grid-cols-2 gap-6 mb-8">
+                    <div class="text-center p-4 bg-primary/5 rounded-lg">
+                        <p class="font-bold text-2xl text-accent mb-2">5+ Years</p>
+                        <p class="text-gray-600">Experience</p>
+                    </div>
+                    <div class="text-center p-4 bg-primary/5 rounded-lg">
+                        <p class="font-bold text-2xl text-accent mb-2">1000+</p>
+                        <p class="text-gray-600">Designs Created</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Me -->
+<section class="py-16 bg-primary/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-playfair text-3xl font-bold text-dark text-center mb-12">Why Choose Cookie's Palette</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <div class="text-accent text-4xl mb-4">✨</div>
+                <h3 class="font-bold text-xl text-dark mb-4">Premium Quality</h3>
+                <p class="text-gray-600">
+                    I use only the highest quality gels and materials to ensure your nails look beautiful and last longer.
+                </p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <div class="text-accent text-4xl mb-4">🎨</div>
+                <h3 class="font-bold text-xl text-dark mb-4">Custom Designs</h3>
+                <p class="text-gray-600">
+                    Every design is customized to your style, making each set of nails a unique piece of art.
+                </p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <div class="text-accent text-4xl mb-4">💝</div>
+                <h3 class="font-bold text-xl text-dark mb-4">Personal Attention</h3>
+                <p class="text-gray-600">
+                    Your comfort and satisfaction are my top priorities. Enjoy a relaxing, one-on-one service experience.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Studio -->
+<section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="font-playfair text-3xl font-bold text-dark mb-6">Your Private Nail Studio</h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Located in the heart of Middle Village, Queens, my private studio offers a peaceful and intimate setting for your nail service. The space is designed for your comfort and relaxation, ensuring a luxurious experience from start to finish.
+                </p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center text-gray-600">
+                        <span class="text-accent mr-2">✓</span>
+                        Private, one-on-one service
+                    </li>
+                    <li class="flex items-center text-gray-600">
+                        <span class="text-accent mr-2">✓</span>
+                        Relaxing atmosphere
+                    </li>
+                    <li class="flex items-center text-gray-600">
+                        <span class="text-accent mr-2">✓</span>
+                        Sanitized equipment for every client
+                    </li>
+                    <li class="flex items-center text-gray-600">
+                        <span class="text-accent mr-2">✓</span>
+                        Easy parking available
+                    </li>
+                </ul>
+                <p class="text-gray-600 italic">
+                    * Exact location provided upon booking confirmation
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="/static/images/nail_design_06.jpg" alt="Nail art example" class="rounded-lg shadow-md">
+                <img src="/static/images/nail_design_07.jpg" alt="Nail art example" class="rounded-lg shadow-md">
+                <img src="/static/images/flowery_pink_two_thumbs.jpg" alt="Nail art example" class="rounded-lg shadow-md">
+                <img src="/static/images/tiny_nail_gels.jpg" alt="Nail art example" class="rounded-lg shadow-md">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Booking CTA -->
+<section class="bg-accent text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-playfair text-3xl md:text-4xl font-bold mb-6">Ready for Your Nail Transformation?</h2>
+        <p class="text-lg mb-8 opacity-90">Let's create something beautiful together</p>
+        <a href="/book" class="inline-block bg-white text-accent px-12 py-4 rounded-full text-lg font-semibold hover:bg-primary hover:text-white transition-colors">Book Your Appointment</a>
+    </div>
+</section>
+{% endblock %} 

@@ -1,0 +1,81 @@
+{# templates/base.html #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Cookie's Palette{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFC0CB', // Baby pink
+                        secondary: '#F8F8FF', // Off-white
+                        accent: '#FF69B4', // Hot pink for CTAs
+                        dark: '#4A4A4A', // Dark gray for text
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+    </style>
+</head>
+<body class="font-poppins bg-secondary min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="font-playfair text-2xl font-bold text-primary">Cookie's Palette</a>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="/" class="text-dark hover:text-accent">Home</a>
+                    <a href="/services" class="text-dark hover:text-accent">Services</a>
+                    <a href="/gallery" class="text-dark hover:text-accent">Gallery</a>
+                    <a href="/about" class="text-dark hover:text-accent">About</a>
+                    <a href="/book" class="bg-accent text-white px-4 py-2 rounded-full hover:bg-primary transition-colors">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white mt-16 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="font-playfair text-xl font-bold text-dark mb-4">Cookie's Palette</h3>
+                    <p class="text-gray-600">Elevating your nail game with custom artistic designs.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-dark mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/services" class="text-gray-600 hover:text-accent">Services</a></li>
+                        <li><a href="/gallery" class="text-gray-600 hover:text-accent">Gallery</a></li>
+                        <li><a href="/book" class="text-gray-600 hover:text-accent">Book Appointment</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-dark mb-4">Contact</h4>
+                    <p class="text-gray-600">Middle Village, Queens<br>New York</p>
+                    <p class="mt-2 text-gray-600">Address provided upon booking confirmation</p>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-200 text-center text-gray-600">
+                <p>&copy; {% raw %}{{ year }}{% endraw %} Cookie's Palette. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

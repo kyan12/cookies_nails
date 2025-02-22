@@ -1,3 +1,2 @@
 FLASK_APP=cookies_nails.py
 FLASK_DEBUG=0
-SECRET_KEY=smWjiURr2SDLYQM-GcBfysxnJxO5xoJO73bCAvsvAkM

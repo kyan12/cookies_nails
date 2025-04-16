@@ -4,7 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Cookie's Palette{% endblock %}</title>
+    <meta name="description" content="Cookie's Palette - Premium nail art and design services in Middle Village, Queens. Specializing in custom gel art, 3D designs, and elegant nail applications.">
+    <meta name="keywords" content="nail art, nail design, gel nails, Queens nail salon, Middle Village nails, custom nail art">
+    <meta property="og:title" content="{% block og_title %}Cookie's Palette - Premium Nail Art & Design{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Experience premium nail art services at Cookie's Palette in Middle Village, Queens. Custom designs, gel applications, and 3D nail art.{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}/static/images/hero-nails2.jpg{% endblock %}">
+    <meta property="og:url" content="https://cookiesnails.com{{ request.path }}">
+    <title>{% block title %}Cookie's Palette - Premium Nail Art & Design{% endblock %}</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/static/images/favicon.png">
+    
+    <!-- Tailwind and Custom Styles -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -15,7 +26,16 @@
                         secondary: '#F8F8FF', // Off-white
                         accent: '#FF69B4', // Hot pink for CTAs
                         dark: '#4A4A4A', // Dark gray for text
-                    }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                    },
                 }
             }
         }
@@ -24,52 +44,94 @@
     <style>
         .font-playfair { font-family: 'Playfair Display', serif; }
         .font-poppins { font-family: 'Poppins', sans-serif; }
+        
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Mobile menu styles */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
     </style>
 </head>
-<body class="font-poppins bg-secondary min-h-screen">
+<body class="font-poppins bg-secondary min-h-screen flex flex-col">
     <!-- Navigation -->
-    <nav class="bg-white shadow-md">
+    <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <a href="/" class="font-playfair text-2xl font-bold text-primary">Cookie's Palette</a>
+                    <a href="/" class="font-playfair text-2xl font-bold text-primary hover:text-accent transition-colors">Cookie's Palette</a>
                 </div>
-                <div class="flex items-center space-x-8">
-                    <a href="/" class="text-dark hover:text-accent">Home</a>
-                    <a href="/services" class="text-dark hover:text-accent">Services</a>
-                    <a href="/gallery" class="text-dark hover:text-accent">Gallery</a>
-                    <a href="/about" class="text-dark hover:text-accent">About</a>
-                    <a href="/book" class="bg-accent text-white px-4 py-2 rounded-full hover:bg-primary transition-colors">Book Now</a>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-dark hover:text-accent transition-colors">Home</a>
+                    <a href="/services" class="text-dark hover:text-accent transition-colors">Services</a>
+                    <a href="/gallery" class="text-dark hover:text-accent transition-colors">Gallery</a>
+                    <a href="/about" class="text-dark hover:text-accent transition-colors">About</a>
+                    <a href="/book" class="bg-accent text-white px-6 py-2 rounded-full hover:bg-primary transition-colors transform hover:scale-105">Book Now</a>
                 </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-dark hover:text-accent">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu fixed top-16 right-0 bottom-0 w-64 bg-white shadow-lg md:hidden">
+            <div class="flex flex-col space-y-4 p-4">
+                <a href="/" class="text-dark hover:text-accent transition-colors">Home</a>
+                <a href="/services" class="text-dark hover:text-accent transition-colors">Services</a>
+                <a href="/gallery" class="text-dark hover:text-accent transition-colors">Gallery</a>
+                <a href="/about" class="text-dark hover:text-accent transition-colors">About</a>
+                <a href="/book" class="bg-accent text-white px-4 py-2 rounded-full hover:bg-primary transition-colors text-center">Book Now</a>
             </div>
         </div>
     </nav>
 
     <!-- Content -->
-    <main>
+    <main class="flex-grow animate-fade-in">
         {% block content %}{% endblock %}
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white mt-16 border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+    <footer class="bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                     <h3 class="font-playfair text-xl font-bold text-dark mb-4">Cookie's Palette</h3>
-                    <p class="text-gray-600">Elevating your nail game with custom artistic designs.</p>
+                    <p class="text-gray-600 mb-4">Elevating your nail game with custom artistic designs.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://instagram.com/cookies_palette" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-primary transition-colors">
+                            <span class="sr-only">Instagram</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
                 <div>
                     <h4 class="font-bold text-dark mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="/services" class="text-gray-600 hover:text-accent">Services</a></li>
-                        <li><a href="/gallery" class="text-gray-600 hover:text-accent">Gallery</a></li>
-                        <li><a href="/book" class="text-gray-600 hover:text-accent">Book Appointment</a></li>
+                        <li><a href="/services" class="text-gray-600 hover:text-accent transition-colors">Services</a></li>
+                        <li><a href="/gallery" class="text-gray-600 hover:text-accent transition-colors">Gallery</a></li>
+                        <li><a href="/book" class="text-gray-600 hover:text-accent transition-colors">Book Appointment</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-bold text-dark mb-4">Contact</h4>
                     <p class="text-gray-600">Middle Village, Queens<br>New York</p>
                     <p class="mt-2 text-gray-600">Address provided upon booking confirmation</p>
+                    <p class="mt-4 text-gray-600">Business Hours:<br>Tue-Sat: 10AM - 7PM</p>
                 </div>
             </div>
             <div class="mt-8 pt-8 border-t border-gray-200 text-center text-gray-600">
@@ -77,5 +139,22 @@
             </div>
         </div>
     </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>

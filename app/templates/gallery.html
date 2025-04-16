@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+        <h1 class="font-playfair text-4xl md:text-5xl font-bold text-dark mb-6">Nail Art Gallery</h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Explore our collection of stunning nail designs. From elegant classics to bold statements, each piece is a unique work of art.
+        </p>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Floral Designs -->
+        <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <img src="/static/images/two_hands_flowery_gold_pink.jpg" alt="Elegant gold and pink floral nail design" 
+                 class="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 p-4 text-white">
+                    <h3 class="font-playfair text-xl font-bold">Floral Elegance</h3>
+                    <p class="text-sm">Gold accents with pink floral details</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <img src="/static/images/flowery_pink_two_thumbs.jpg" alt="Pink floral nail design with thumb accent" 
+                 class="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 p-4 text-white">
+                    <h3 class="font-playfair text-xl font-bold">Pink Blossom</h3>
+                    <p class="text-sm">Delicate floral patterns with thumb accent</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Color Gels -->
+        <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <img src="/static/images/color_gels.jpg" alt="Vibrant color gel collection" 
+                 class="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 p-4 text-white">
+                    <h3 class="font-playfair text-xl font-bold">Color Collection</h3>
+                    <p class="text-sm">Vibrant gel colors for every style</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tiny Nail Gels -->
+        <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <img src="/static/images/tiny_nail_gels.jpg" alt="Miniature nail gel collection" 
+                 class="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 p-4 text-white">
+                    <h3 class="font-playfair text-xl font-bold">Mini Collection</h3>
+                    <p class="text-sm">Perfect for travel and touch-ups</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Designs -->
+        <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <img src="/static/images/nail_design_01.jpg" alt="Elegant nail design with gold accents" 
+                 class="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 p-4 text-white">
+                    <h3 class="font-playfair text-xl font-bold">Golden Touch</h3>
+                    <p class="text-sm">Elegant design with gold accents</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <img src="/static/images/nail_design_02.jpg" alt="Modern nail art design" 
+                 class="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 p-4 text-white">
+                    <h3 class="font-playfair text-xl font-bold">Modern Art</h3>
+                    <p class="text-sm">Contemporary nail art design</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <img src="/static/images/nail_design_03.jpg" alt="Sophisticated nail design" 
+                 class="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 p-4 text-white">
+                    <h3 class="font-playfair text-xl font-bold">Sophisticated Style</h3>
+                    <p class="text-sm">Elegant and timeless design</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <img src="/static/images/nail_design_04.jpg" alt="Creative nail art design" 
+                 class="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 p-4 text-white">
+                    <h3 class="font-playfair text-xl font-bold">Creative Expression</h3>
+                    <p class="text-sm">Unique and artistic design</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <img src="/static/images/nail_design_05.jpg" alt="Bold nail art design" 
+                 class="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 p-4 text-white">
+                    <h3 class="font-playfair text-xl font-bold">Bold Statement</h3>
+                    <p class="text-sm">Daring and unique design</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="text-center mt-16">
+        <h2 class="font-playfair text-3xl font-bold text-dark mb-6">Ready for Your Own Custom Design?</h2>
+        <p class="text-lg text-gray-600 mb-8">Book an appointment and let's create something beautiful together.</p>
+        <a href="/book" class="inline-block bg-accent text-white px-8 py-3 rounded-full hover:bg-primary transition-colors transform hover:scale-105">
+            Book Your Appointment
+        </a>
+    </div>
+</div>
+{% endblock %} 
